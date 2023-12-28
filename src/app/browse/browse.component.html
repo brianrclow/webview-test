@@ -1,8 +1,36 @@
 <ActionBar>
-  <Label text="Browse"></Label>
+  <Label text="Web/HTML View"></Label>
 </ActionBar>
 
-<GridLayout class="page__content">
-  <Label class="page__content-icon far" text="&#xf1ea;"></Label>
-  <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
-</GridLayout>
+<ScrollView>
+  <StackLayout>
+    <!-- <Label text="Below" textWrap="true"></Label> -->
+    <Label text="WebView" textWrap="true" style="color: red"></Label>
+    <WebView [src]="example_html"></WebView>
+    <!-- <WebView src="<div><h1>Some static HTML</h1></div>"></WebView> -->
+    <!-- <WebView src="https://www.streetparking.com/"></WebView> -->
+    <!-- <WebView src="https://nativescript.org/"></WebView> -->
+    <Label text="AWebView" textWrap="true" style="color: red"></Label>
+    <AWebView [src]="example_html"></AWebView>
+    <!-- <AWebView src="https://nativescript.org/"></AWebView> -->
+
+    <Label text="HtmlView" textWrap="true" style="color: red"></Label>
+    <HtmlView [html]="example_html"></HtmlView>
+
+    <Label text="HtmlLabel" textWrap="true" style="color: red"></Label>
+    <!-- <HtmlLabel textWrap="true" [html]="example_html"></HtmlLabel> -->
+    <!-- class="font-sans" -->
+    <HTMLLabel
+      [html]="example_html"
+      fontFamily="OpenSans"
+      fontSize="16"
+      margin="2 5 5 5"
+      textWrap="true"
+    ></HTMLLabel>
+
+    <!-- <HtmlView
+    html="<h1>Angular 4</h1> <p> This is hopefully an <em>example</em> of a <u>few things</u></p> <ul> <li>a bulleted</li> <li>list</li> <li>italicas</li> <li>and underline</li> </ul> <ol> <li>numbered list</li> </ol> <p>and <strong>boldness too</strong></p> <p>&nbsp;</p> <p>Some switching of sides</p>"
+  ></HtmlView> -->
+    <!-- <Label text="Above" textWrap="true"></Label> -->
+  </StackLayout>
+</ScrollView>
